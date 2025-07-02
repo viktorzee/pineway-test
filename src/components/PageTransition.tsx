@@ -1,5 +1,4 @@
 import { motion, AnimatePresence } from "framer-motion"
-import type React from "react"
 
 interface PageTransitionProps {
   children: React.ReactNode
@@ -18,7 +17,7 @@ export function PageTransition({ children, pageKey }: PageTransitionProps) {
           duration: 0.3,
           ease: "easeInOut",
         }}
-        className="w-full"
+        className="w-full h-full"
       >
         {children}
       </motion.div>

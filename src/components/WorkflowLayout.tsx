@@ -17,9 +17,9 @@ export function WorkflowLayout({ children, toolbarTitle, toolbarDescription, too
     <div className="h-screen overflow-hidden bg-white p-4 md:p-6 flex items-center justify-center">
       <div className="w-full h-full bg-white rounded-2xl shadow-[0_1px_2px_0px_#09090B0D,0_0_0_1px_#09090B0D] border border-gray-200 p-4 md:p-6 flex flex-col items-center justify-center overflow-auto">
         
-        <div className="flex flex-col items-center justify-center gap-6 md:gap-8 w-full max-w-4xl">
+        <div className="flex flex-col justify-center gap-6 md:gap-8 w-full max-w-4xl">
           {/* Contextual Toolbar and Main Content Side-by-Side */}
-          <div className="flex flex-col lg:flex-row items-start justify-center gap-6 md:gap-20 w-full overflow-hidden">
+          <div className="flex flex-col lg:flex-row items-end justify-center gap-6 md:gap-20 w-full overflow-hidden">
             {/* Contextual Toolbar */}
             <div className="w-full max-w-sm">
               <ContextualToolbar
