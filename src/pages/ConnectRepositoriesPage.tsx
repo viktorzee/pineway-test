@@ -30,7 +30,7 @@ export function ConnectRepositoriesPage() {
         <div className="space-y-4 md:space-y-1 ">
           <div className=" bg-[#FCFCFC] p-3 shadow-md rounded-2xl">
 
-            <h2 className="text-lg md:text-base font-semibold text-gray-900 flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-2">
+            <h2 className="text-lg md:text-base font-semibold text-[#292929] flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-2 mb-1">
               <span>Connect repositories to</span>
               <span className="text-xs text-purple-600 bg-purple-100 px-2 py-1 rounded font-medium w-fit">acme</span>
             </h2>
@@ -51,12 +51,13 @@ export function ConnectRepositoriesPage() {
             </div>
 
             <div className="flex flex-col space-y-3 md:flex-row md:justify-end md:space-y-0 gap-3 pt-4">
-              <Button variant="outline" className="text-gray-600 bg-white border-gray-300 order-2 md:order-1">
+              <Button size="sm" variant="outline" className="text-gray-600 bg-white border-gray-300 order-2 md:order-1">
                 Cancel
               </Button>
               <Button
                 className="bg-purple-600 hover:bg-purple-700 text-white order-1 md:order-2"
                 onClick={() => navigate("/create-api-key")}
+                size="sm"
               >
                 Connect repositories
               </Button>

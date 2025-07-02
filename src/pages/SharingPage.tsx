@@ -66,12 +66,13 @@ export function SharingPage() {
             )}
 
             <div className="flex flex-col space-y-3 md:flex-row md:justify-end md:space-y-0 gap-3 pt-4">
-              <Button variant="outline" className="text-gray-600 bg-white border-gray-300 order-2 md:order-1">
+              <Button size="sm" variant="outline" className="text-gray-600 bg-white border-gray-300 order-2 md:order-1">
                 Cancel
               </Button>
               <Button
                 className="bg-purple-600 hover:bg-purple-700 text-white order-1 md:order-2"
                 onClick={() => navigate("/")}
+                size="sm"
               >
                 Create secret key
               </Button>

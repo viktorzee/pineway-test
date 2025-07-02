@@ -21,7 +21,7 @@ export function CreateApiKeyPage() {
         <div className="space-y-4 md:space-y-2">
           <div className=" bg-[#FCFCFC] p-3 shadow-md rounded-2xl">
             <div>
-              <h2 className="text-lg md:text-base font-semibold text-gray-900">Create new API key</h2>
+              <h2 className="text-lg md:text-base font-semibold text-[#292929]">Create new API key</h2>
               <p className="text-sm text-gray-600 mt-2">
                 Your secret API key for actions such as users belonging to your organization.
               </p>

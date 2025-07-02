@@ -4,6 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
 import { Card, CardContent } from "./ui/card"
 
 
+
 const unsplashImages = [
   {
     id: 0,
@@ -28,15 +29,35 @@ const unsplashImages = [
 export function EngineeringSyncCard() {
   const [isExpanded, setIsExpanded] = useState(false)
 
+    const getCardWidth = () => {
+      if (typeof window !== 'undefined') {
+        const screenWidth = window.innerWidth;
+        const padding = 32;
+        const maxWidth = screenWidth - padding;
+        
+        if (screenWidth < 640) {
+          return isExpanded ? Math.min(maxWidth, 340) : Math.min(maxWidth, 300);
+        } else if (screenWidth < 768) {
+          return isExpanded ? Math.min(maxWidth, 420) : Math.min(maxWidth, 350);
+        }
+        return isExpanded ? 482 : 350;
+      }
+      return 300; // fallback
+    };
+
+
+
   const toggleExpanded = () => {
     setIsExpanded(!isExpanded)
   }
 
   return (
     <motion.div
-      animate={{ width: isExpanded ? 482 : 350 }}
-      transition={{ duration: 0.3, ease: "easeInOut" }}
-    >
+        animate={{ width: getCardWidth() }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        className="w-full max-w-full"
+        style={{ maxWidth: '100%' }}
+      >
       <Card
         className="bg-white shadow-lg border border-gray-200 cursor-pointer hover:shadow-md transition-shadow overflow-hidden p-3"
         style={{ borderRadius: '18px' }}

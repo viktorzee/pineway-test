@@ -32,24 +32,28 @@ export function DashboardWidgets() {
   const navigate = useNavigate()
 
   return (
-    <div className="min-h-screen bg-white p-6 md:p-20 flex items-center justify-center">
-      <div className="w-7xl bg-white rounded-2xl shadow-[0_1px_2px_0px_#09090B0D,0_0_0_1px_#09090B0D] border border-gray-200 p-6 flex flex-col items-center gap-12">
+    <div className="h-screen overflow-hidden bg-white p-4 md:p-6 flex items-center justify-center">
+      <div className="w-full h-full bg-white rounded-2xl shadow-[0_1px_2px_0px_#09090B0D,0_0_0_1px_#09090B0D] border border-gray-200 p-4 md:p-6 flex flex-col items-center justify-center overflow-auto">
         
-        {/* Widgets Side-by-Side */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 w-full">
-          <CalendarWidget />
-          <EngineeringSyncCard />
-        </div>
+        <div className="flex flex-col items-center justify-center gap-6 md:gap-8 w-full max-w-4xl">
+          {/* Widgets Side-by-Side */}
+          <div className="flex flex-col lg:flex-row items-start justify-center gap-6 md:gap-40 w-full overflow-hidden">
+            <CalendarWidget />
+            <EngineeringSyncCard />
+          </div>
 
-        {/* Navigation Button below */}
-        <div className="flex justify-start w-full md:w-2/3">
-          <Button
-            variant="outline"
-            className="text-gray-600 bg-white border-gray-300 hover:bg-gray-50 shadow-md"
-            onClick={() => navigate("/create-webhook")}
-          >
-            Next task
-          </Button>
+          {/* Button positioned below both widgets, aligned with calendar widget */}
+          <div className="flex justify-start w-full max-w-4xl">
+            <div className="w-full max-w-sm">
+              <Button
+                variant="outline"
+                className="text-gray-600 bg-white border-gray-300 hover:bg-gray-50 shadow-md"
+                onClick={() => navigate("/create-webhook")}
+              >
+                Next task
+              </Button>
+            </div>
+          </div>
         </div>
 
       </div>

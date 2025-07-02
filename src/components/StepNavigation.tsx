@@ -91,8 +91,8 @@ export function StepNavigation({ currentStep }: StepNavigationProps) {
                   onClick={() => handleStepClick(step.path)}
                   className={`text-xs md:text-sm px-3 md:px-4 py-2 rounded-md transition-all whitespace-nowrap ${
                     currentStep === step.id
-                      ? "bg-gray-50 text-gray-900 shadow-sm font-medium"
-                      : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+                      ? "bg-gray-100 text-[#424242] shadow-sm font-medium"
+                      : "text-[#737373] hover:text-gray-900 hover:bg-gray-100"
                   }`}
                 >
                   {step.label}

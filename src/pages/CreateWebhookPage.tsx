@@ -40,7 +40,7 @@ export function CreateWebhookPage() {
     >
       <PageTransition pageKey="create-webhook">
         <div className="space-y-4 md:space-y-3">
-          <h2 className="text-lg md:text-base mb-2  font-semibold text-gray-900">Create webhook</h2>
+          <h2 className="text-lg md:text-base mb-2  font-semibold text-[#292929]">Create webhook</h2>
 
           <div className="bg-[#FCFCFC] p-3 shadow-md rounded-2xl">
 
@@ -128,12 +128,13 @@ export function CreateWebhookPage() {
             </div>
 
             <div className="flex flex-col space-y-3 md:flex-row md:justify-end md:space-y-0 gap-3 pt-4">
-              <Button variant="outline" className="text-gray-600 bg-white border-gray-300 order-2 md:order-1">
+              <Button size="sm" variant="outline" className="text-gray-600 bg-white border-gray-300 order-2 md:order-1">
                 Cancel
               </Button>
               <Button
                 className="bg-[#7839EE] hover:bg-purple-700 text-white order-1 md:order-2"
                 onClick={() => navigate("/connect-repositories")}
+                size="sm"
               >
                 Create webhook
               </Button>
